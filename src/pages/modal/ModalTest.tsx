@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   CustomModal,
   CustomModalTitle,
@@ -13,10 +13,21 @@ import down from "@assets/icons/down.svg";
 const ModalTest: any = (props: any) => {
   const { isModalOpen, handleModalOpen } = props;
 
+  const [loading, setIsLoading] = useState(false);
+
   const handleClick = () => {
     alert("clicked");
   };
 
+  const setTimeoutButton = () => {
+    console.log("working");
+    setIsLoading(true);
+
+    setTimeout(() => {
+      console.log("received response");
+      setIsLoading(false);
+    }, 3000);
+  };
   return (
     <>
       <CustomModal open={isModalOpen}>
@@ -137,7 +148,14 @@ const ModalTest: any = (props: any) => {
           <Button variant="primary-outline" onClick={handleModalOpen}>
             Close
           </Button>
-          <Button variant="primary">Submit</Button>
+          {/* <Button variant="primary">Submit</Button> */}
+          <Button
+            onClick={setTimeoutButton}
+            loading={loading}
+            loadingMessage=""
+          >
+            Submit
+          </Button>
         </CustomModalFooter>
       </CustomModal>
     </>

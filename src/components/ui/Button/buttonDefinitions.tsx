@@ -1,7 +1,5 @@
 import Image from "next/image";
 
-import buttonClass from "./button.module.css";
-
 import search from "../../../assets/icons/search.svg";
 import down from "../../../assets/icons/down.svg";
 import download from "../../../assets/icons/download.svg";
@@ -24,8 +22,6 @@ export const style = [
   "danger-outline",
   "success-outline",
   "link",
-  "download",
-  "download-outline",
   "search",
 ];
 
