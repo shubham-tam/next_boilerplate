@@ -1,1 +1,1 @@
-export const footerPlacement = ["left", "center", "right"];
+export const footerPlacement = ["right", "center", "left"];

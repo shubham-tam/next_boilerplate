@@ -39,12 +39,12 @@ export const CustomModal: FC<CustomModal> = ({ children, open }) => {
 export const CustomModalTitle: FC<CustomTitle> = ({ children, onClose }) => {
   return (
     <>
-      <div className="text-black flex justify-between py-2">
+      <div className="text-black flex justify-between py-3 px-2">
         <span className="text-gray-700 text-xl font-medium">{children}</span>
         <Button
           icon={cross}
           onClick={onClose}
-          className="bg-transparent hover:bg-gray-100 hover:rounded-full items-center"
+          className="bg-transparent hover:bg-gray-100 hover:rounded-full items-center p-2"
         />
       </div>
       <hr />
@@ -54,7 +54,7 @@ export const CustomModalTitle: FC<CustomTitle> = ({ children, onClose }) => {
 
 export const CustomModalBody: FC<CustomBody> = ({ children }) => {
   return (
-    <div className="bg-white py-2 px-4 items-center rounded-sm">{children}</div>
+    <div className="bg-white py-1 px-3 items-center rounded-sm">{children}</div>
   );
 };
 
@@ -64,7 +64,7 @@ export const CustomModalFooter: FC<CustomModalFooter> = ({
 }) => {
   const alignStyle = footerPlacement.includes(align)
     ? align
-    : footerPlacement[2];
+    : footerPlacement[0];
   return (
     <>
       <hr />

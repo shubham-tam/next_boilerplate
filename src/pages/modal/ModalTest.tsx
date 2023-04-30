@@ -20,21 +20,20 @@ const ModalTest: any = (props: any) => {
   return (
     <>
       <CustomModal open={isModalOpen}>
+        <CustomModalTitle onClose={handleModalOpen}>Title</CustomModalTitle>
         <CustomModalBody>
-          <CustomModalTitle onClose={handleModalOpen}>Title</CustomModalTitle>
-          {/* <div className="text-slate-400">wgowghlkwjgl</div>
-          <div className="text-slate-400">wgowghlkwjgl</div>
-          <div className="text-slate-400">wgowghlkwjgl</div>
-          <div className="text-slate-400">wgowghlkwjgl</div>
-          <div className="text-slate-400">wgowghlkwjgl</div>
-          <div className="text-slate-400">wgowghlkwjgl</div>
-          <div className="text-slate-400">wgowghlkwjgl</div>
-          <div className="text-slate-400">wgowghlkwjgl</div>
-          <div className="text-slate-400">wgowghlkwjgl</div> */}
+          {/* <div>
+            <div className="text-slate-400">wgowghlkwjgl</div>
+            <div className="text-slate-400">wgowghlkwjgl</div>
+            <div className="text-slate-400">wgowghlkwjgl</div>
+            <div className="text-slate-400">wgowghlkwjgl</div>
+            <div className="text-slate-400">wgowghlkwjgl</div>
+          </div> */}
+
           <div>
             <div className="flex flex-col items-center">
               <span> Main Buttons</span>
-              <div className="flex justify-center gap-3 p-8">
+              <div className="flex justify-center gap-3">
                 <div className="flex flex-col">
                   <Button variant="primary" onClick={handleClick}>
                     Primary Button
@@ -49,7 +48,7 @@ const ModalTest: any = (props: any) => {
                 </div>
               </div>
 
-              <div className="flex justify-center gap-3 p-8">
+              <div className="flex justify-center gap-3">
                 <div className="flex flex-col">
                   <Button variant="warning">Warning Button</Button>
                   <span className="text-center"> Warning button</span>
@@ -63,7 +62,7 @@ const ModalTest: any = (props: any) => {
                 </div>
               </div>
 
-              <div className="flex justify-center gap-3 p-8">
+              <div className="flex justify-center gap-3">
                 <div className="flex flex-col">
                   <Button variant="danger">Danger Button</Button>
                   <span className="text-center"> Danger button</span>
@@ -76,7 +75,7 @@ const ModalTest: any = (props: any) => {
                 </div>
               </div>
 
-              <div className="flex justify-center gap-3 p-8">
+              <div className="flex justify-center gap-3">
                 <div className="flex flex-col">
                   <Button variant="success">Success Button</Button>
                   <span className="text-center">Success Button</span>
@@ -89,7 +88,7 @@ const ModalTest: any = (props: any) => {
                 </div>
               </div>
 
-              <div className="flex justify-center gap-3 p-8">
+              <div className="flex justify-center gap-3">
                 <div className="flex flex-col">
                   <Button>Button without any style prop</Button>
                   <span className="text-center">
@@ -108,7 +107,7 @@ const ModalTest: any = (props: any) => {
           <div>
             <div className="flex flex-col items-center">
               <span>Utility Buttons</span>
-              <div className="flex justify-center gap-3 p-8">
+              <div className="flex justify-center gap-3">
                 <div className="flex flex-col">
                   <Button isDisabled={true}>{"Disabled Button"}</Button>
                   <span className="text-center"> Disabled button</span>
@@ -121,7 +120,7 @@ const ModalTest: any = (props: any) => {
                 </div>
               </div>
 
-              <div className="flex justify-center gap-3 p-8">
+              <div className="flex justify-center gap-3">
                 <div className="flex flex-col">
                   <Button icon={down}>Icon with down arrow</Button>
                   <span className="text-center"> Icon with down arrow</span>
@@ -133,14 +132,13 @@ const ModalTest: any = (props: any) => {
               </div>
             </div>
           </div>
-
-          <CustomModalFooter>
-            <Button variant="primary-outline" onClick={handleModalOpen}>
-              Close
-            </Button>
-            <Button variant="primary">Submit</Button>
-          </CustomModalFooter>
         </CustomModalBody>
+        <CustomModalFooter>
+          <Button variant="primary-outline" onClick={handleModalOpen}>
+            Close
+          </Button>
+          <Button variant="primary">Submit</Button>
+        </CustomModalFooter>
       </CustomModal>
     </>
   );
