@@ -21,7 +21,6 @@ interface CustomBody {
 
 interface CustomModalFooter {
   children: React.ReactNode;
-  // open: boolean;
   align?: string;
 }
 
@@ -40,9 +39,7 @@ export const CustomModal: FC<CustomModal> = ({ children, open }) => {
 export const CustomModalTitle: FC<CustomTitle> = ({ children, onClose }) => {
   return (
     <>
-      <div
-        className={`text-black flex justify-between py-2 ${classes["modal-title"]}`}
-      >
+      <div className="text-black flex justify-between py-2">
         <span className="text-gray-700 text-xl font-medium">{children}</span>
         <Button
           icon={cross}
@@ -57,13 +54,7 @@ export const CustomModalTitle: FC<CustomTitle> = ({ children, onClose }) => {
 
 export const CustomModalBody: FC<CustomBody> = ({ children }) => {
   return (
-    <div
-      className={
-        "bg-white py-2 px-4 items-center rounded-sm " + classes["modal-body"]
-      }
-    >
-      {children}
-    </div>
+    <div className="bg-white py-2 px-4 items-center rounded-sm">{children}</div>
   );
 };
 
@@ -77,7 +68,7 @@ export const CustomModalFooter: FC<CustomModalFooter> = ({
   return (
     <>
       <hr />
-      <div className={`py-2  + ${classes[alignStyle]}`}>{children}</div>
+      <div className={`py-4  + ${classes[alignStyle]}`}>{children}</div>
     </>
   );
 };
