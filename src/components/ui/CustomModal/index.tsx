@@ -25,7 +25,7 @@ interface CustomModalFooter {
 }
 
 export const CustomModal: FC<CustomModal> = ({ children, open }) => {
-  if (open) {
+  if (!open) {
     return null;
   }
 

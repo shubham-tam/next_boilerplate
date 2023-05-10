@@ -18,7 +18,7 @@ const Modal = () => {
           className="bg-white text-slate-500 font-bold flex hover:bg-indigo-400 hover:text-white"
           size="large"
         >
-          {isModalOpen ? "Open Modal" : "Close Modal"}
+          {isModalOpen ? "Close Modal" : "Open Modal"}
         </Button>
       </div>
 
