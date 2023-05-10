@@ -5,7 +5,7 @@ import buttonClass from "./button.module.css";
 
 import { sizes, style, getIconElement, IconKey } from "./buttonDefinitions";
 
-interface ButtonProps {
+export interface ButtonProps {
   link?: string;
   className?: string;
   variant?: (typeof style)[number];
